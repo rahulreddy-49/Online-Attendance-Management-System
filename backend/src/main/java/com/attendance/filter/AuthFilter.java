@@ -21,8 +21,8 @@ public class AuthFilter implements Filter {
 
         String path = req.getRequestURI().substring(req.getContextPath().length());
 
-        // Allow access to login, logout, root landing, static assets, and error pages
-        if (path.equals("/login") || path.equals("/login.jsp") ||
+        // Allow access to API endpoints, login, logout, root landing, static assets, and error pages
+        if (path.startsWith("/api/") || path.equals("/login") || path.equals("/login.jsp") ||
             path.equals("/logout") || path.equals("/") || path.equals("/index.jsp") ||
             path.startsWith("/assets/") || path.equals("/favicon.ico") ||
             path.equals("/error.jsp")) {

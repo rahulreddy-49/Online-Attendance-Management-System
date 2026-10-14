@@ -65,6 +65,12 @@ public class TeacherDAO {
         return list;
     }
 
+    public int insert(Teacher teacher) throws SQLException {
+        try (Connection conn = DBUtil.getConnection()) {
+            return insert(conn, teacher);
+        }
+    }
+
     public int insert(Connection conn, Teacher teacher) throws SQLException {
         String sql = "INSERT INTO teachers (user_id, employee_id, department_id, phone, qualification, is_active) " +
             "VALUES (?, ?, ?, ?, ?, ?)";
