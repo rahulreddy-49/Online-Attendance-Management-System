@@ -1,0 +1,13 @@
+.git
+.github
+.vscode
+.idea
+
+**/node_modules
+**/target
+**/dist
+**/*.log
+**/*.class
+
+frontend/node_modules
+frontend/dist

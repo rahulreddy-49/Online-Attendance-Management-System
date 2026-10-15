@@ -3,7 +3,10 @@
  * Communicates with backend endpoints with offline resilient fallbacks.
  */
 
-const API_BASE = '/api';
+// In production this points at the deployed backend (e.g. https://<app>.onrender.com).
+// When unset (local dev) it stays relative and is proxied by Vite to the local backend.
+const API_ORIGIN = (import.meta.env.VITE_API_BASE || '').replace(/\/+$/, '');
+const API_BASE = `${API_ORIGIN}/api`;
 
 // Initial Seed Data (matches MySQL seed.sql)
 let mockDepartments = [

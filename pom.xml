@@ -85,6 +85,10 @@
             <resource>
                 <directory>backend/src/main/resources</directory>
             </resource>
+            <!-- Ship the SQL scripts so the app can self-provision its schema on first boot -->
+            <resource>
+                <directory>database</directory>
+            </resource>
         </resources>
         <plugins>
             <plugin>

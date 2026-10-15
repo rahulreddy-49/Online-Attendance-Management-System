@@ -11,7 +11,7 @@ USE attendance_db;
 -- Username: admin  |  Password: admin123 (BCrypt hashed)
 -- ============================================================
 INSERT INTO users (username, password_hash, role, full_name, email, is_active)
-VALUES ('admin', '$2a$12$LJ3m4ys3uz0bTMqJocBL3OiIq5FvMSvVnGWP7KHcQxX8SOhTmaVbG', 'ADMIN', 'System Administrator', 'admin@college.edu', 1)
+VALUES ('admin', '$2a$12$RLwlVNnSYmH/euKjf9a7lumf3yNAJJBgkYiONAYP7fhAZ7tAHO.xS', 'ADMIN', 'System Administrator', 'admin@college.edu', 1)
 ON DUPLICATE KEY UPDATE username = username;
 
 -- ============================================================
@@ -47,7 +47,7 @@ ON DUPLICATE KEY UPDATE name = VALUES(name);
 -- Username: teacher1  |  Password: teacher123 (BCrypt hashed)
 -- ============================================================
 INSERT INTO users (username, password_hash, role, full_name, email, is_active)
-VALUES ('teacher1', '$2a$12$LJ3m4ys3uz0bTMqJocBL3OiIq5FvMSvVnGWP7KHcQxX8SOhTmaVbG', 'TEACHER', 'Dr. Rajesh Kumar', 'rajesh@college.edu', 1)
+VALUES ('teacher1', '$2a$12$GrFueUypVE12BNQvYnFxhuF9ssQttNfatFLwn9uBupH5b3zWTloh2', 'TEACHER', 'Dr. Rajesh Kumar', 'rajesh@college.edu', 1)
 ON DUPLICATE KEY UPDATE username = username;
 
 INSERT INTO teachers (user_id, employee_id, department_id, phone, qualification)
